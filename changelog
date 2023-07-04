@@ -1,0 +1,51 @@
+VERSION 0.5.0 -----
+  o  Fix for issue https://github.com/ncarrier/discus/issues/1
+  o  A discusrc file isn't mandatory anymore
+
+
+VERSION 0.4.0 ----- March 13th, 2020
+  o  More standard return statuses, 64, for usage error, 78 for config
+  o  Display width adapted to the terminal size
+  o  Ignore silently statvfs permission errors
+
+
+VERSION 0.3.0 ----- March 27th, 2020
+
+  o  Python 3 compatibility.
+  o  dropped support for the stat_prog configuration option
+
+
+VERSION 0.2.9 ----- September 15th, 2000
+
+  o  Fixed a color bug (thanks to Aaron Marasco).
+  o  Added mention of the configuration files in the README.
+
+
+VERSION 0.2.8 ----- September 15th, 2000
+
+  o  Colors may be altered in the configuration file.
+
+
+VERSION 0.2.7 ----- September 13th, 2000
+
+  o  May define your own graph characters in config file.
+  o  Fixed bug with reserved space that caused falsely inflated disk space
+       usage to be reported.
+
+
+VERSION 0.2.4 ----- September 13th, 2000
+
+  o  Added /etc/discusrc and $HOME/.discusrc configuration files.
+
+  o  Will fall back to using the external stat program if the statvfs
+       module is unavailable.
+
+  o  May use shell commands to obtain mounts information.  An example is
+      provided in the config file using /bin/mount with awk.
+
+  o  May specify your own labels for KB/MB/GB/TB in config file.
+
+
+VERSION 0.2.2 ----- September 12th, 2000
+
+  o  First public release.

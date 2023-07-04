@@ -1,5 +1,252 @@
-template-repository (1.0-1) unstable; urgency=medium
+discus (0.5.0-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version 0.5.0.
+  * debian/control:
+      - Bumped Standards-Version to 4.6.2.
+  * debian/copyright:
+      - Added files to the lists.
+      - Updated packaging copyright years.
+      - Updated upstream copyright years.
+  * debian/gbp.conf: file created.
+  * debian/tests: updated with upstream files.
+  * debian/upstream/metadata:
+      - Changed contact e-mail address.
+      - Fixed upstream metadata fields: Repository.
+      - Removed obsolete field Name from debian/upstream/metadata (already
+        present in machine-readable debian/copyright).
+  * debian/watch: fixed.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+
+ -- Paulo Henrique de Lima Santana (phls) <phls@debian.org>  Wed, 18 Jan 2023 20:00:23 -0300
+
+discus (0.4.0-1) unstable; urgency=medium
+
+  * New upstream version 0.4.0. (LP: #1459032)
+  * debian/control:
+      - Added  Multi-Arch: foreign;
+      - Bumped Standards-Version to 4.5.1.
+  * debian/copyright:
+      - Added list of files.
+      - Updated upstream copyright years.
+  * debian/docs: removed files.
+  * debian/tests: improved tests for autopkgtest. (Closes: #969818)
+
+ -- Paulo Henrique de Lima Santana (phls) <phls@debian.org>  Wed, 23 Dec 2020 19:48:26 -0300
+
+discus (0.3.0-1) unstable; urgency=medium
+
+  * New upstream version 0.3.0. (Closes: #945636)
+  * debian/control:
+      - Added 'Rules-Requires-Root: no' in source stanza.
+      - Added dh-python and python3 dependencies.
+      - Bumped Standards-Version to 4.5.0.
+      - Changed Depends field for Python3.
+      - Changed Homepage field for the new upstream.
+      - Changed Maintainer's email.
+      - Changed Vcs-* fields for new repository in salsa.
+      - Updated DH to level 13.
+  * debian/copyright:
+      - Added new upstream Nicolas Carrier and his copyright year.
+      - Changed Maintainer's email.
+      - Changed Source field for the new upstream.
+      - Updated packaging copyright years.
+  * debian/install: removed install file discus.py and move to rules.
+  * debian/patches: delete all patches because they are not necessary.
+  * debian/upstream/metadata: updated for the new upstream and repository.
+  * debian/rules:
+      - Added python3 helper.
+      - Rename file to remove extension py.
+  * debian/watch: updated for the new repository.
+  * debian/salsa-ci.yml: created to start CI tests for Salsa.
+
+ -- Paulo Henrique de Lima Santana (phls) <phls@debian.org>  Sat, 09 May 2020 19:17:51 -0300
+
+discus (0.2.9-11) unstable; urgency=medium
+
+  * debian/control:
+      - Added Vcs-* fields.
+      - Bumped Standards-Version to 4.2.1.
+      - New format to debhelper-compat and updated level to 11.
+      - Updated Paulo's email.
+  * debian/compat: deleted.
+  * debian/copyright:
+      - Updated Paulo's email.
+      - Updated packaging copyright years.
+      - Using a secure copyright format in URI.
+  * debian/tests/*: added to perform trivial tests.
+  * debian/upstream/metadata: created.
+
+ -- Paulo Henrique de Lima Santana (phls) <paulo@phls.com.br>  Wed, 21 Nov 2018 22:49:56 -0200
+
+discus (0.2.9-10) unstable; urgency=medium
+
+  * debian/control:
+      - Bumped Standards-Version to 4.0.0.
+      - Vcs-Browser and Vcs-Svn fields removed.
+  * debian/copyright: maintainer copyright year updated.
+
+ -- Paulo Henrique de Lima Santana (phls) <phls@softwarelivre.org>  Tue, 27 Jun 2017 17:38:54 -0300
+
+discus (0.2.9-9) unstable; urgency=medium
+
+  * New maintainer. (Closes: #634187)
+  * Updated DH to level 10.
+
+ -- Paulo Henrique de Lima Santana (phls) <phls@softwarelivre.org>  Tue, 27 Sep 2016 20:53:00 -0300
+
+discus (0.2.9-8) unstable; urgency=medium
+
+  * QA upload.
+  * debian/control:
+      - bumped Standards-Version to 3.9.8.
+      - priority changed to optional.
+      - Vcs-Browser changed to fix insecure issue.
+  * debian/copyright:
+      - added old maintainers.
+      - converted to format 1.0.
+  * debian/docs: added AUTHORS upstream file.
+  * debian/etc: removed extra lines and unnecessary spaces.
+  * debian/patches/90_manpage_fix_email.diff: changed Stormy Henderson's
+    email.
+  * debian/README.source: deleted because the dpatch dependency is not
+    necessary.
+  * debian/watch: changed to point to a fake package because the upstream
+    site is down.
+
+ -- Paulo Henrique de Lima Santana (phls) <phls@softwarelivre.org>  Wed, 21 Sep 2016 21:02:44 -0300
+
+discus (0.2.9-7) unstable; urgency=medium
+
+  * QA upload.
+  * Updated DH to level 9.
+  * debian/control: bumped Standards-Version to 3.9.6.
+  * debian/docs: created to install some docs.
+  * debian/install: created to install some files.
+  * debian/manpages: install the upstream manpage.
+  * debian/rules: using the new (reduced) format.
+
+ -- Paulo Henrique de Lima Santana <phls@softwarelivre.org>  Thu, 28 May 2015 12:24:08 -0300
+
+discus (0.2.9-6) unstable; urgency=low
+
+  * QA upload.
+    + Set Maintainer to Debian QA Group.
+    + Remove Uploaders.
+  * Add build-arch, build-indep and binary-arch targets to debian/rules.
+  * Convert to source format 3.0 (quilt).
+  * Exclude more filesystems by default (closes: #224393;
+    04_bts-224393_exclude_fs.diff).
+  * Make patch headers DEP-3 compliant.
+  * Bump standards version to 3.9.2 (no changes needed).
+
+ -- Jakub Wilk <jwilk@debian.org>  Wed, 19 Oct 2011 00:22:40 +0200
+
+discus (0.2.9-5) unstable; urgency=low
+
+  * debian/control
+    - added to PAPT team (setting it as maintainer)
+    - set me as uploaders, updating my email address
+    - bump Standards-Version to 3.8.0
+      + added debian/README.source
+    - added ${misc:Depends} to Depends
+    - removed extra space from description (used to justify text)
+    - added Vcs-{Browser,Svn} fields
+    - removed python from b-d-i since not needed to build the package
+  * debian/TODO.Debian
+    - removed since no more needed
+  * debian/rules
+    - left an empty 'build' target, since we are not building anything
+    - no need to touch 'install-stamp', it's PHONY
+  * debian/patches/20_bts-312262_reserved_space.dpatch
+    - added description
+
+ -- Sandro Tosi <morph@debian.org>  Wed, 24 Dec 2008 23:41:23 +0100
+
+discus (0.2.9-4) unstable; urgency=low
+
+  * debian/control
+    - bump Standard-Version to 3.7.3
+    - moved Homepage from binary to source stanza
+  * debian/copyright
+    - clear separation of upstream author, copyright and license
+  * debian/rules
+    - removed commented lines and unneeded dh scripts
+    - removed binary-arch since it's an Arch: all package
+  * debian/patches/10_bts-291276_space_mountpoint.dpatch
+    - converts octal values to chars (Closes: #291276)
+  * debian/patches/02_manpage_pre-adoption.dpatch
+    - updated to fix a lintian warning about minus sign
+  * debian/patches/20_bts-312262_reserved_space.dpatch
+    - taking into account even reserved space to root (Closes: #312262)
+  * debian/watch
+    - added, as suggested by DDPO
+
+ -- Sandro Tosi <matrixhasu@gmail.com>  Sat, 22 Dec 2007 17:54:02 +0100
+
+discus (0.2.9-3) unstable; urgency=low
+
+  * New maintainer. (Closes: #388650)
+  * moved to a non-native package fashion
+  * debian/control
+    - new maintainer
+    - dependency against debhelper >= 5.0
+    - added Homepage meta-field
+    - reformat long description
+    - removed full stop (".") at the end of short description
+    - moved python dependency on Build-Depends-Indep field
+    - add dependency against dpatch
+  * debian/compat
+    - bump to compatibility 5
+  * debian/README.Debian
+    - removed, since it was of no use
+  * debian/copyright
+    - add original packager
+    - new maintainer
+    - add upstream homepage
+    - add copyright note
+    - add right path to GPL2, since this is the license under which the
+      software is licensed
+  * debian/docs
+    - removed
+  * debian/rules
+    - add docs to install as parameters to dh_installdocs
+    - now uses dh_installman instead of dh_installmanpages; then add discus.1
+      as its param
+    - add dpatch support
+  * debian/conffiles
+    - removed since debhelper already knows about conffiles installed
+  * debian/patches/01_readme_change_url.dpatch
+    - changes to README file are now done via dpatch
+  * debian/patches/02_manpage_pre-adoption.dpatch
+    - changes to discus.1 file are now done via dpatch
+  * debian/patches/03_discusrc_labels.dpatch
+    - changes to discusrc are now done via dpatch
+  * debian/patches/04_bts-224393_exclude_fs.dpatch
+    - Additional filesystems to be excluded by default (Closes: #224393)
+  * debian/patches/04_discus_correct_mail_url.dpatch
+    - correct upstream mail and url
+
+ -- Sandro Tosi <matrixhasu@gmail.com>  Mon,  9 Oct 2006 20:56:45 +0200
+
+discus (0.2.9-2) unstable; urgency=low
+
+  * QA upload.
+  * Set QA group as Maintainer.
+  * Acknowledge NMU, thanks Blars Blarson.
+  * Update Standards-Version to 3.7.2.
+  * Set to debhelper compatibility 4.
+
+ -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Thu, 21 Sep 2006 21:48:49 +0200
+
+discus (0.2.9-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Add additional unit prefixes, patch from Marga Manterola (closes: #225750)
+
+ -- Blars Blarson <blarson@blars.org>  Sun, 30 Oct 2005 03:17:10 +0000
+
+discus (0.2.9-1) unstable; urgency=low
+
+  * Initial release. (closes: #217478)
+
+ -- Ron Farrer <rbf@debian.org>  Mon, 20 Oct 2003 23:48:27 -0800
